@@ -1,66 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tormenta20 - Gerenciador</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tormenta20 - Gerenciador</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrap">
-<h1 class='titulo'>Ícaro T20</h1>
+    <div class="wrap">
+        <h1 class='titulo'>Ícaro T20</h1>
+        
+        <div class="decorator-hr"></div>
 
-<div class="card">
-<h2>Personagem</h2>
-<input id="charName" placeholder="Nome do Personagem">
-<input id="charLevel" type="number" placeholder="Nível">
-<button onclick="saveCharacter()">Salvar Personagem</button>
-<p id="charMsg"></p>
-</div>
+        <div class="card-grid">
+            <div class="card">
+                <h2>Personagem</h2>
+                <div class="card-content">
+                    <input id="charName" placeholder="Nome do Personagem">
+                    <input id="charLevel" type="number" placeholder="Nível">
+                    <button onclick="saveCharacter()">Salvar Personagem</button>
+                    <p id="charMsg"></p>
+                </div>
+            </div>
 
-<div class="card">
-<h2>Engenhoca</h2>
-<input id="engName" placeholder="Nome">
-<input id="engBase" type="number" placeholder="PM Base">
-<input id="engApr" type="number" placeholder="PM Aprimoramentos">
-<button onclick="addEng()">Adicionar ao Inventário</button>
-<div id="engOut"></div>
-</div>
+            <div class="card">
+                <h2>Tabela de Círculos</h2>
+                <div class="card-content">
+                    <ul class="circulos-list">
+                        <li><span>1º Círculo</span> <span>1 PM</span></li>
+                        <li><span>2º Círculo</span> <span>3 PM</span></li>
+                        <li><span>3º Círculo</span> <span>6 PM</span></li>
+                        <li><span>4º Círculo</span> <span>10 PM</span></li>
+                        <li><span>5º Círculo</span> <span>15 PM</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-<div class="card">
-<h2>Poção</h2>
-<input id="potName" placeholder="Nome">
-<input id="potPM" type="number" placeholder="PM Total">
-<button onclick="addPotion()">Adicionar ao Inventário</button>
-<div id="potOut"></div>
-</div>
+        <div class="decorator-hr"></div>
 
-<div class="card">
-<h2>Pergaminho</h2>
-<input id="scrName" placeholder="Nome">
-<input id="scrBase" type="number" placeholder="PM Base">
-<input id="scrApr" type="number" placeholder="PM de Aprimoramentos ao Usar">
-<button onclick="addScroll()">Adicionar ao Inventário</button>
-<div id="scrOut"></div>
-</div>
+        <div class="card-grid">
+            <div class="card">
+                <h2>Engenhoca</h2>
+                <div class="card-content">
+                    <input id="engName" placeholder="Nome">
+                    <input id="engBase" type="number" placeholder="PM Base">
+                    <input id="engApr" type="number" placeholder="PM Aprimoramentos">
+                    <button onclick="addEng()">Adicionar ao Inventário</button>
+                    <div id="engOut" class="output-preview"></div>
+                </div>
+            </div>
 
-<div class="card">
-<h2>Tabela de Círculos</h2>
-<ul>
-<li>1º = 1 PM</li>
-<li>2º = 3 PM</li>
-<li>3º = 6 PM</li>
-<li>4º = 10 PM</li>
-<li>5º = 15 PM</li>
-</ul>
-</div>
+            <div class="card">
+                <h2>Poção</h2>
+                <div class="card-content">
+                    <input id="potName" placeholder="Nome">
+                    <input id="potPM" type="number" placeholder="PM Total">
+                    <button onclick="addPotion()">Adicionar ao Inventário</button>
+                    <div id="potOut" class="output-preview"></div>
+                </div>
+            </div>
 
-<div class="card">
-<h2>Inventário</h2>
-<button class="danger" onclick="clearInventory()">Limpar Inventário</button>
-<div id="inventory"></div>
-</div>
-</div>
-<script src="script.js"></script>
+            <div class="card">
+                <h2>Pergaminho</h2>
+                <div class="card-content">
+                    <input id="scrName" placeholder="Nome">
+                    <input id="scrBase" type="number" placeholder="PM Base">
+                    <input id="scrApr" type="number" placeholder="PM de Aprimoramentos ao Usar">
+                    <button onclick="addScroll()">Adicionar ao Inventário</button>
+                    <div id="scrOut" class="output-preview"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="decorator-hr"></div>
+
+        <div class="card full-width">
+            <h2>Inventário</h2>
+            <div class="card-content">
+                <button class="danger" onclick="clearInventory()">Limpar Inventário</button>
+                <div id="inventory" class="inventory-grid"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
